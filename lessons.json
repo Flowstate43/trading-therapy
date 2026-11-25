@@ -1,0 +1,24 @@
+{
+  "lessons": [
+    {
+      "title": "Support & Resistance",
+      "blurb": "How to spot areas where buyers and sellers have repeatedly stepped in — and how not to treat them as guarantees.",
+      "status": "coming soon"
+    },
+    {
+      "title": "Candlestick basics",
+      "blurb": "Read the story of a session: opens, closes, wicks, and what a single candle can and cannot tell you.",
+      "status": "coming soon"
+    },
+    {
+      "title": "Risk management",
+      "blurb": "Position size, invalidation, and staying in the game long enough for skill to matter.",
+      "status": "coming soon"
+    },
+    {
+      "title": "Chart patterns",
+      "blurb": "Common shapes traders watch, why they form, and the limits of pattern-only decisions.",
+      "status": "coming soon"
+    }
+  ]
+}

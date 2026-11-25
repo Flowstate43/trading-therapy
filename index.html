@@ -7,106 +7,170 @@
   <title>TradingTherapy — Daily trading therapy for crypto traders</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="bg-glow" aria-hidden="true"></div>
+  <div class="atmosphere" aria-hidden="true">
+    <div class="blob blob-a"></div>
+    <div class="blob blob-b"></div>
+    <div class="blob blob-c"></div>
+  </div>
 
-  <header class="site-header">
-    <a class="logo" href="#top">TradingTherapy</a>
-    <nav class="nav" aria-label="Primary">
+  <header class="header">
+    <div class="header-left">
+      <a class="logo" href="#top">Trading<span>Therapy</span></a>
+    </div>
+    <nav class="site-nav" aria-label="Primary">
       <a href="#about">About</a>
+      <a href="#newsletter">Newsletter</a>
+      <a href="#learning">Learning</a>
       <a href="#beginner">Beginners</a>
       <a href="#advanced">Daily stats</a>
     </nav>
-    <a class="btn btn-sm" href="https://m.me/j/AbY7Lx_SSPZwO3t6/" target="_blank" rel="noopener">Join us on Messenger</a>
+    <div class="header-right">
+      <div class="btc-price-block">
+        <div class="btc-label">BTC</div>
+        <div class="btc-price" id="hdr-btc-price">—</div>
+        <div class="btc-change" id="hdr-btc-change"></div>
+      </div>
+      <a class="btn" href="https://m.me/j/AbY7Lx_SSPZwO3t6/" target="_blank" rel="noopener">Join us on Messenger</a>
+      <div class="updated-at" id="updated-at">Last updated: —</div>
+    </div>
   </header>
 
-  <main id="top">
+  <main class="wrap" id="top">
     <section class="hero">
-      <p class="eyebrow">A calmer daily read for crypto traders</p>
-      <h1>TradingTherapy</h1>
-      <p class="tagline">Daily trading therapy for crypto traders</p>
-      <a class="btn btn-lg" href="https://m.me/j/AbY7Lx_SSPZwO3t6/" target="_blank" rel="noopener">Join us on Messenger</a>
+      <div class="card hero-welcome">
+        <p class="card-title">TradingTherapy</p>
+        <h1>Welcome. Sit back, grab some coffee, and let's dive in.</h1>
+        <a class="btn btn-lg" href="https://m.me/j/AbY7Lx_SSPZwO3t6/" target="_blank" rel="noopener">Join our group chat on Messenger</a>
+        <p class="soon-label">Telegram coming soon</p>
+      </div>
+      <div class="card hero-price">
+        <p class="card-title">Market pulse</p>
+        <div class="btc-label">Bitcoin</div>
+        <div class="btc-price" id="hero-btc-price">—</div>
+        <div class="btc-change" id="hero-btc-change"></div>
+        <div class="hero-src" id="hero-pulse-meta">Live snapshot · updates every 90 seconds</div>
+      </div>
     </section>
 
-    <section id="about" class="section about">
-      <h2>About</h2>
-      <p>
+    <section id="about" class="card">
+      <h2 class="card-title">About</h2>
+      <p class="about-copy">
         TradingTherapy is a daily trading therapy and crypto newsletter for beginners and advanced traders.
         Each issue is built to slow the feed down: a clear mindset note, the market context that actually matters,
         and a short brief you can use without getting pulled into the noise.
       </p>
     </section>
 
-    <section id="beginner" class="section">
-      <div class="section-head">
-        <h2>Beginner corner</h2>
-        <p class="section-note">Placeholder layout — daily content is added by Poster Boy.</p>
+    <section id="newsletter" class="card">
+      <div class="cmp-head">
+        <h2 class="card-title">Newsletter</h2>
+        <p class="card-subtitle" style="margin:0">Daily archive</p>
       </div>
-      <div class="card-grid">
+      <ul class="archive-list" id="newsletter-list"></ul>
+    </section>
+
+    <section id="learning">
+      <div class="cmp-head">
+        <h2 class="card-title">Trading Learning</h2>
+        <p class="card-subtitle" style="margin:0">Lessons and chart patterns</p>
+      </div>
+      <div class="grid" id="lessons-grid"></div>
+    </section>
+
+    <section id="beginner">
+      <div class="cmp-head">
+        <h2 class="card-title">Beginner corner</h2>
+        <p class="card-subtitle" style="margin:0">Placeholder layout — daily content is added by Poster Boy.</p>
+      </div>
+      <div class="grid">
         <article class="card">
-          <p class="card-label">Tip of the day</p>
-          <h3>Write the plan first</h3>
-          <p>If you can’t say the trade in one sentence — why you’re in, where you’re wrong, and how much you can lose — you’re not ready to click.</p>
+          <p class="card-subtitle">Tip of the day</p>
+          <h3 class="panel-heading">Write the plan first</h3>
+          <p class="panel-copy">If you can’t say the trade in one sentence — why you’re in, where you’re wrong, and how much you can lose — you’re not ready to click.</p>
         </article>
         <article class="card">
-          <p class="card-label">Glossary term</p>
-          <h3>Support</h3>
-          <p>A price area where buying has historically stepped in. It’s a reference point, not a promise that the market will bounce.</p>
+          <p class="card-subtitle">Glossary term</p>
+          <h3 class="panel-heading">Support</h3>
+          <p class="panel-copy">A price area where buying has historically stepped in. It’s a reference point, not a promise that the market will bounce.</p>
         </article>
         <article class="card">
-          <p class="card-label">Mindset note</p>
-          <h3>Missing a move is allowed</h3>
-          <p>Forcing a trade just to feel involved is usually more expensive than sitting out. There will be another setup.</p>
+          <p class="card-subtitle">Mindset note</p>
+          <h3 class="panel-heading">Missing a move is allowed</h3>
+          <p class="panel-copy">Forcing a trade just to feel involved is usually more expensive than sitting out. There will be another setup.</p>
         </article>
       </div>
     </section>
 
-    <section id="advanced" class="section">
-      <div class="section-head">
-        <h2>Advanced daily stats</h2>
-        <p class="section-note">Updated daily · Placeholder layout — daily content is added by Poster Boy.</p>
+    <section id="advanced">
+      <div class="cmp-head">
+        <h2 class="card-title">Advanced daily stats</h2>
+        <p class="status-note" id="data-delayed" hidden>Data delayed</p>
       </div>
-      <div class="stats-grid">
-        <article class="stat">
-          <p class="stat-label">BTC price</p>
-          <p class="stat-value">—</p>
-          <p class="stat-meta">Placeholder</p>
+      <div class="grid stats-grid">
+        <article class="card stat-card" data-coin="bitcoin">
+          <p class="liq-stat-label">BTC price</p>
+          <p class="liq-stat-val" id="stat-btc-price">—</p>
+          <p class="btc-change" id="stat-btc-change"></p>
         </article>
-        <article class="stat">
-          <p class="stat-label">ETH price</p>
-          <p class="stat-value">—</p>
-          <p class="stat-meta">Placeholder</p>
+        <article class="card stat-card" data-coin="ethereum">
+          <p class="liq-stat-label">ETH price</p>
+          <p class="liq-stat-val" id="stat-eth-price">—</p>
+          <p class="btc-change" id="stat-eth-change"></p>
         </article>
-        <article class="stat">
-          <p class="stat-label">Funding</p>
-          <p class="stat-value">—</p>
-          <p class="stat-meta">Placeholder</p>
+        <article class="card stat-card" data-coin="solana">
+          <p class="liq-stat-label">SOL price</p>
+          <p class="liq-stat-val" id="stat-sol-price">—</p>
+          <p class="btc-change" id="stat-sol-change"></p>
         </article>
-        <article class="stat">
-          <p class="stat-label">Fear &amp; greed</p>
-          <p class="stat-value">—</p>
-          <p class="stat-meta">Placeholder</p>
+        <article class="card stat-card" data-coin="ripple">
+          <p class="liq-stat-label">XRP price</p>
+          <p class="liq-stat-val" id="stat-xrp-price">—</p>
+          <p class="btc-change" id="stat-xrp-change"></p>
         </article>
-        <article class="stat stat-wide">
-          <p class="stat-label">Key levels</p>
-          <p class="stat-value">—</p>
-          <p class="stat-meta">Support / resistance to be updated daily</p>
+        <article class="card stat-card" data-coin="binancecoin">
+          <p class="liq-stat-label">BNB price</p>
+          <p class="liq-stat-val" id="stat-bnb-price">—</p>
+          <p class="btc-change" id="stat-bnb-change"></p>
+        </article>
+      </div>
+      <div class="grid half" style="margin-top:14px">
+        <article class="card">
+          <p class="card-title">BTC dominance</p>
+          <p class="liq-stat-val stat-lg" id="stat-btc-dom">—</p>
+          <p class="panel-copy">Share of total crypto market cap.</p>
+        </article>
+        <article class="card">
+          <p class="card-title">Fear &amp; greed</p>
+          <div class="fg-compact">
+            <div class="fg-value" id="stat-fng-value">—</div>
+            <div class="fg-label" id="stat-fng-label"></div>
+          </div>
+          <div class="fg-bar-wrap">
+            <div class="fg-bar" id="stat-fng-bar" style="width:0%"></div>
+          </div>
+          <div class="fg-scale">
+            <span>0</span><span>Extreme fear</span><span>Extreme greed</span><span>100</span>
+          </div>
         </article>
       </div>
     </section>
 
-    <section class="cta section">
-      <h2>Ready for the daily brief?</h2>
-      <p>Join the TradingTherapy channel for the newsletter, beginner notes, and advanced daily stats.</p>
+    <section class="card cta-card">
+      <h2 class="panel-heading">Ready for the daily brief?</h2>
+      <p class="panel-copy">Join the TradingTherapy channel for the newsletter, beginner notes, and advanced daily stats.</p>
       <a class="btn btn-lg" href="https://m.me/j/AbY7Lx_SSPZwO3t6/" target="_blank" rel="noopener">Join us on Messenger</a>
+      <p class="soon-label">Telegram coming soon</p>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="footer">
     <p>Not financial advice. For education and entertainment only.</p>
   </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>

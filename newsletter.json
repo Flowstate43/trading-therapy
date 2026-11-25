@@ -1,0 +1,22 @@
+{
+  "posts": [
+    {
+      "date": "2026-11-25",
+      "title": "Tuesday calm: sitting with the tape",
+      "teaser": "A short morning note on patience, position size, and why today's move doesn't need a reaction.",
+      "sample": true
+    },
+    {
+      "date": "2026-11-24",
+      "title": "When the market is loud, go quieter",
+      "teaser": "How to read a messy session without chasing, plus one beginner mindset check.",
+      "sample": true
+    },
+    {
+      "date": "2026-11-23",
+      "title": "Support, not a promise",
+      "teaser": "A plain-language look at levels, and what it means when they break.",
+      "sample": true
+    }
+  ]
+}
