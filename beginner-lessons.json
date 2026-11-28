@@ -1,0 +1,46 @@
+[
+  {
+    "number": 1,
+    "title": "What a dip is + Fear & Greed",
+    "date": "2026-11-25",
+    "bullets": [
+      "💧 A dip is a sharp drop in the price of something, like Bitcoin falling hard in a short time. That's what we were in on Nov 25.",
+      "🌡️ The Fear & Greed index scores crypto's mood from 0 (extreme fear) to 100 (extreme greed). On Nov 25 it was 13 (Extreme Fear).",
+      "🧠 It doesn't predict the future. It just shows whether the crowd is panicking or piling in.",
+      "📌 Fear can mean lower prices. It does not mean the bottom is in, or that buying is safe."
+    ]
+  },
+  {
+    "number": 2,
+    "title": "What Bitcoin is",
+    "date": "2026-11-26",
+    "bullets": [
+      "🪙 Bitcoin is digital money that no company or CEO runs.",
+      "🔢 Only 21 million will ever exist. That fixed supply is why people call it \"digital gold.\"",
+      "🌐 Thousands of computers worldwide keep its record of who owns what.",
+      "📉 It's not a company stock: no earnings, no boss. Its price is just what buyers and sellers agree on, which is why moods like today's fear move it so much."
+    ]
+  },
+  {
+    "number": 3,
+    "title": "Wallets",
+    "date": "2026-11-27",
+    "bullets": [
+      "🔑 A crypto wallet doesn't hold coins. It holds the keys that prove the coins are yours.",
+      "🏦 If an app or exchange holds your keys, they control the coins. If you hold them (self-custody), you do.",
+      "📝 Self-custody wallets give you a seed phrase (12 or 24 words). That IS your money.",
+      "🚫 Never share it, type it into a website, or send it to \"support.\" Anyone with those words can empty your wallet."
+    ]
+  },
+  {
+    "number": 4,
+    "title": "Exchanges",
+    "date": "2026-11-28",
+    "bullets": [
+      "🏪 An exchange (like a crypto app) is where you buy and sell coins with dollars.",
+      "🪪 You make an account and verify your ID first. That's called KYC.",
+      "🏦 Coins left on an exchange are held by them, like Lesson 3's custodial wallet. Moving them to your own wallet means you hold the keys.",
+      "🔐 If you keep coins on one, lock the account with 2FA. That's exactly what AI hackers look for."
+    ]
+  }
+]

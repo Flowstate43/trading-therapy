@@ -566,3 +566,93 @@ a {
     background-size: auto;
   }
 }
+
+.site-nav a[aria-current="page"] {
+  color: var(--lavender);
+  font-weight: 600;
+}
+
+.lessons-intro h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3.4vw, 2.4rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin: 0 0 0.85rem;
+}
+
+.beginner-home .panel-copy {
+  margin-bottom: 0.2rem;
+}
+
+.beginner-index {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0.9rem 0 1.2rem;
+}
+
+.beginner-index a {
+  display: grid;
+  grid-template-columns: 6.8rem 1fr auto;
+  gap: 8px 16px;
+  align-items: baseline;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.beginner-index li:last-child a {
+  border-bottom: 0;
+}
+
+.beginner-index .lesson-num {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--lavender);
+}
+
+.beginner-index .lesson-title {
+  font-family: var(--font-display);
+  font-size: 1.08rem;
+  font-weight: 500;
+}
+
+.beginner-index a:hover .lesson-title,
+.beginner-index a:focus-visible .lesson-title {
+  color: var(--lavender);
+}
+
+.lesson-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.lesson-card .archive-date {
+  margin: 0 0 0.9rem;
+}
+
+.lesson-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.lesson-bullets li {
+  color: var(--text);
+  font-size: 1.02rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 900px) {
+  .beginner-index a {
+    grid-template-columns: 1fr auto;
+  }
+
+  .beginner-index .lesson-num {
+    grid-column: 1 / -1;
+  }
+}
