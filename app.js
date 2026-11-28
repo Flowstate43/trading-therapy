@@ -253,13 +253,93 @@
     }
   }
 
+  function renderBeginnerLessons(lessons) {
+    const list = $("beginner-lessons-list");
+    const index = $("beginner-lessons-index");
+    if (!list && !index) return;
+
+    const items = (lessons || [])
+      .slice()
+      .sort((a, b) => {
+        const n = (a.number || 0) - (b.number || 0);
+        if (n !== 0) return n;
+        return String(a.date || "").localeCompare(String(b.date || ""));
+      });
+
+    if (list) {
+      list.replaceChildren();
+      if (!items.length) {
+        const empty = document.createElement("p");
+        empty.className = "panel-copy";
+        empty.textContent = "Lessons will show up here once they are added.";
+        list.append(empty);
+      } else {
+        items.forEach((lesson) => {
+          const card = document.createElement("article");
+          card.className = "card lesson-card";
+          card.id = `lesson-${lesson.number}`;
+
+          const kicker = document.createElement("p");
+          kicker.className = "card-subtitle";
+          kicker.textContent = `Lesson ${lesson.number}`;
+
+          const title = document.createElement("h2");
+          title.className = "panel-heading";
+          title.textContent = lesson.title || "Lesson";
+
+          const date = document.createElement("p");
+          date.className = "archive-date";
+          date.textContent = formatDate(lesson.date);
+
+          const bullets = document.createElement("ul");
+          bullets.className = "lesson-bullets";
+          (lesson.bullets || []).forEach((text) => {
+            const li = document.createElement("li");
+            li.textContent = text;
+            bullets.append(li);
+          });
+
+          card.append(kicker, title, date, bullets);
+          list.append(card);
+        });
+      }
+    }
+
+    if (index) {
+      index.replaceChildren();
+      items.forEach((lesson) => {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = `beginner-lessons.html#lesson-${lesson.number}`;
+
+        const num = document.createElement("span");
+        num.className = "lesson-num";
+        num.textContent = `Lesson ${lesson.number}`;
+
+        const title = document.createElement("span");
+        title.className = "lesson-title";
+        title.textContent = lesson.title || "Lesson";
+
+        const date = document.createElement("span");
+        date.className = "archive-date";
+        date.textContent = formatDate(lesson.date);
+
+        a.append(num, title, date);
+        li.append(a);
+        index.append(li);
+      });
+    }
+  }
+
   async function initContent() {
-    const [posts, lessons] = await Promise.all([
+    const [posts, lessons, beginnerLessons] = await Promise.all([
       loadJsonCollection("newsletter.json", FALLBACK_POSTS, "posts"),
       loadJsonCollection("lessons.json", FALLBACK_LESSONS, "lessons"),
+      loadJsonCollection("beginner-lessons.json", [], "lessons"),
     ]);
     renderNewsletter(posts);
     renderLessons(lessons);
+    renderBeginnerLessons(beginnerLessons);
   }
 
   // Messenger URLs stay in the HTML; keep a single source if any are added later.
